@@ -8,10 +8,12 @@ Register the CustomConditionProvidingRequestMappingHandlerMapping instead of the
 and provide it with the RequireProfileConditionProvider. You can now use the @RequireProfile to further restrict
 method selection:
 
+```java
 @RequestMapping(value = "/customer/{id}", produces = "application/json")
 @RequireProfile("nl.jhkuperus.Customer.v1")
 public Customer getCustomer(@PathVariable Long id) {
     // ...
 }
+```
 
 TODO : Add more elaborate example
