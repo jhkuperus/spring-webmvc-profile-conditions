@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.yoink.spring</groupId>
     <artifactId>spring-webmvc-profile-conditions</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
+    <version>0.2.0</version>
     <name>Spring WebMVC Profile Conditions</name>
     <description>Additional annotation to support MediaType profile restrictions on RequestMappings.</description>
     <url>https://github.com/jhkuperus/spring-webmvc-profile-conditions</url>
