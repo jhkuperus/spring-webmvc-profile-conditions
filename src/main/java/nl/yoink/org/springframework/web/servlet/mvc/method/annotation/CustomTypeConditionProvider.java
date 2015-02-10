@@ -1,4 +1,4 @@
-package nl.jhkuperus.org.springframework.web.servlet.mvc.method.annotation;
+package nl.yoink.org.springframework.web.servlet.mvc.method.annotation;
 
 import org.springframework.web.servlet.mvc.condition.RequestCondition;
 

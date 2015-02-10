@@ -10,7 +10,7 @@ method selection:
 
 ```java
 @RequestMapping(value = "/customer/{id}", produces = "application/json")
-@RequireProfile("nl.jhkuperus.Customer.v1")
+@RequireProfile("nl.yoink.Customer.v1")
 public Customer getCustomer(@PathVariable Long id) {
     // ...
 }

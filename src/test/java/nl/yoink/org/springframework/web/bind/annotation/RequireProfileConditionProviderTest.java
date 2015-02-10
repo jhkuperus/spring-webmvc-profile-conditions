@@ -1,4 +1,4 @@
-package nl.jhkuperus.org.springframework.web.bind.annotation;
+package nl.yoink.org.springframework.web.bind.annotation;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -75,21 +75,21 @@ public class RequireProfileConditionProviderTest {
     }
 
     @RequestMapping(produces = "application/json")
-    @RequireProfile("nl.jhkuperus.Test")
+    @RequireProfile("nl.yoink.Test")
     private static class ValidMappings {
         
         @RequestMapping(produces = "application/json")
-        @RequireProfile("nl.jhkuperus.Test")
+        @RequireProfile("nl.yoink.Test")
         public void testMapping() {
 
         }
         
     }
     
-    @RequireProfile("nl.jhkuperus.Test")
+    @RequireProfile("nl.yoink.Test")
     private static class MissingRequestMapping {
         
-        @RequireProfile("nl.jhkuperus.Test")
+        @RequireProfile("nl.yoink.Test")
         public void testMapping() {
             
         }
@@ -97,11 +97,11 @@ public class RequireProfileConditionProviderTest {
     }
     
     @RequestMapping
-    @RequireProfile("nl.jhkuperus.Test")
+    @RequireProfile("nl.yoink.Test")
     private static class MissingProduces {
 
         @RequestMapping
-        @RequireProfile("nl.jhkuperus.Test")
+        @RequireProfile("nl.yoink.Test")
         public void testMapping() {
 
         }
