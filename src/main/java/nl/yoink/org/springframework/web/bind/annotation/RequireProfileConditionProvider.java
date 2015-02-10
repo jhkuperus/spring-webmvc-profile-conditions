@@ -1,7 +1,7 @@
-package nl.jhkuperus.org.springframework.web.bind.annotation;
+package nl.yoink.org.springframework.web.bind.annotation;
 
-import nl.jhkuperus.org.springframework.web.servlet.mvc.method.annotation.CustomMethodConditionProvider;
-import nl.jhkuperus.org.springframework.web.servlet.mvc.method.annotation.CustomTypeConditionProvider;
+import nl.yoink.org.springframework.web.servlet.mvc.method.annotation.CustomMethodConditionProvider;
+import nl.yoink.org.springframework.web.servlet.mvc.method.annotation.CustomTypeConditionProvider;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.condition.ProfileRestrictingRequestCondition;
@@ -13,7 +13,7 @@ import java.util.Set;
 /**
  * Searches a method or type for the {@link RequireProfile} annotation. If it is found in combination with an {@link RequestMapping}
  * annotation, it will create a custom ProfileRestrictingRequestCondition which the RequestMappingHandlerMapping can
- * use to restrict incoming requests by. Use this provider as a plugin for the {@link nl.jhkuperus.org.springframework.web.servlet.mvc.method.annotation.CustomConditionProvidingRequestMappingHandlerMapping}
+ * use to restrict incoming requests by. Use this provider as a plugin for the {@link nl.yoink.org.springframework.web.servlet.mvc.method.annotation.CustomConditionProvidingRequestMappingHandlerMapping}
  * class to enable the use of the {@link RequireProfile} annotation.
  *  
  * @author J.H. Kuperus

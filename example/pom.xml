@@ -2,10 +2,14 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>nl.yoink.spring</groupId>
-    <artifactId>spring-webmvc-profile-conditions</artifactId>
-    <version>0.2.0</version>
-    <name>Spring WebMVC Profile Conditions</name>
+    <artifactId>spring-webmvc-profile-conditions-example</artifactId>
+    <version>0.1.0</version>
+
+    <packaging>war</packaging>
+    
+    <name>Spring WebMVC Profile Conditions - Example</name>
     <description>Additional annotation to support MediaType profile restrictions on RequestMappings.</description>
     <url>https://github.com/jhkuperus/spring-webmvc-profile-conditions</url>
 
@@ -32,6 +36,7 @@
         <servlet.api.version>3.0.1</servlet.api.version>
         <junit.version>4.11</junit.version>
         <mockito.version>1.8.4</mockito.version>
+        <jackson.version>2.5.0</jackson.version>
     </properties>
 
     <dependencies>
@@ -45,6 +50,26 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.yoink.spring</groupId>
+            <artifactId>spring-webmvc-profile-conditions</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.plugin</groupId>
+            <artifactId>spring-plugin-core</artifactId>
+            <version>1.1.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.hateoas</groupId>
+            <artifactId>spring-hateoas</artifactId>
+            <version>0.16.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -63,7 +88,30 @@
     <build>
         <plugins>
             <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <port>8080</port>
+                    <path>/demo</path>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
         </plugins>
     </build>

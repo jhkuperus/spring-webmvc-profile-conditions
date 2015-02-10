@@ -216,7 +216,8 @@ public class ProfileRestrictingRequestCondition extends AbstractRequestCondition
             String profileLiteralPart = (isWildcardedProfile) ? requiredProfile.substring(-1) : requiredProfile;
 
             for (MediaType acceptedMediaType : acceptedMediaTypes) {
-                if (getMediaType().isCompatibleWith(acceptedMediaType) && ((isWildcardedProfile) ? acceptedMediaType.getParameter(PROFILE_PARAMETER).startsWith(profileLiteralPart) : acceptedMediaType.getParameter(PROFILE_PARAMETER).equals(profileLiteralPart))) {
+                String profileParameter = acceptedMediaType.getParameter(PROFILE_PARAMETER);
+                if (profileParameter != null && getMediaType().isCompatibleWith(acceptedMediaType) && ((isWildcardedProfile) ? profileParameter.startsWith(profileLiteralPart) : profileParameter.equals(profileLiteralPart))) {
                     return true;
                 }
             }

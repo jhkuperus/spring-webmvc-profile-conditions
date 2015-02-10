@@ -1,4 +1,4 @@
-package nl.jhkuperus.org.springframework.web.bind.annotation;
+package nl.yoink.org.springframework.web.bind.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
  * <p>Wildcards are supported, but only as a postfix wildcard. Specific values always take precedence
  * over wildcard values and more specific wildcards take precedence over more general wildcard expressions.</p>
  *
- * <p><strong>Note: </strong> requires the use of a {@link nl.jhkuperus.org.springframework.web.servlet.mvc.method.annotation.CustomConditionProvidingRequestMappingHandlerMapping}
+ * <p><strong>Note: </strong> requires the use of a {@link nl.yoink.org.springframework.web.servlet.mvc.method.annotation.CustomConditionProvidingRequestMappingHandlerMapping}
  * configured with a {@link RequireProfileConditionProvider} in order to be picked up during scanning for request mappings.</p>
  * 
  * @author J.H. Kuperus
