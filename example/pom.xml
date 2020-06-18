@@ -36,7 +36,7 @@
         <servlet.api.version>3.0.1</servlet.api.version>
         <junit.version>4.11</junit.version>
         <mockito.version>1.8.4</mockito.version>
-        <jackson.version>2.9.10.3</jackson.version>
+        <jackson.version>2.10.0.pr1</jackson.version>
     </properties>
 
     <dependencies>
