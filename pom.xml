@@ -26,7 +26,7 @@
         <url>https://github.com/jhkuperus/spring-webmvc-profile-conditions</url>
     </scm>
     <properties>
-        <spring.version>4.0.0.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <servlet.api.version>3.0.1</servlet.api.version>
         <junit.version>4.11</junit.version>
         <mockito.version>1.8.4</mockito.version>
